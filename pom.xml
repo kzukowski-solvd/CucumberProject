@@ -65,6 +65,14 @@
 			<artifactId>byte-buddy</artifactId>
 			<version>1.12.10</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.13</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
