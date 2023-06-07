@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.UserMapper">
+<mapper namespace="com.solvd.carina.demo.gui.interfaces.UserMapper">
 
-    <resultMap id="userResultMap" type="com.example.User">
+    <resultMap id="userResultMap" type="com.solvd.carina.demo.gui.models.User">
         <id property="id" column="id" />
         <result property="name" column="name" />
         <result property="password" column="password" />
@@ -15,7 +15,7 @@
         SELECT * FROM User WHERE id = #{id}
     </select>
 
-    <insert id="insertUser" parameterType="com.example.User">
+    <insert id="insertUser" parameterType="com.solvd.carina.demo.gui.models.User">
         INSERT INTO User (name, password) VALUES (#{name}, #{password})
     </insert>
 
