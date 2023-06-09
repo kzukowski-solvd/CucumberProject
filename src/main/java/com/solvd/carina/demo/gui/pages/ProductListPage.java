@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = AbstractPage.class)
 public class ProductListPage extends AbstractPage {
 
@@ -31,6 +33,10 @@ public class ProductListPage extends AbstractPage {
 
     public String getTitlee(int id) {
         return title.get(id).getText();
+    }
+
+    public List<String> getTitles() {
+        return title.stream().map(ExtendedWebElement::getText).collect(Collectors.toList());
     }
 
     public Double getPrice(int id) {

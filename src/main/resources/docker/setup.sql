@@ -18,7 +18,7 @@ CREATE TABLE User_Orders (
 
 
 INSERT INTO User (name, password) VALUES ('standard_user', 'secret_sauce');
-INSERT INTO User (name, password) VALUES ('locked_out_user', 'secret_sauce');
+INSERT INTO User (name, password) VALUES ('performance_glitch_user', 'secret_sauce');
 
 INSERT INTO User_Orders (user_id, product_name, price) VALUES (1, 'Sauce Labs Backpack', 29.99);
 INSERT INTO User_Orders (user_id, product_name, price) VALUES (1, 'Sauce Labs Bike Light', 9.99);
