@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.solvd.carina.demo.gui.interfaces.UserOrdersMapper">
+
+    <resultMap id="userOrdersResultMap" type="com.solvd.carina.demo.gui.models.UserOrder">
+        <id property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="productName" column="product_name" />
+        <result property="price" column="price" />
+    </resultMap>
+
+    <select id="getUserOrdersByUserId" resultMap="userOrdersResultMap">
+        SELECT * FROM User_Orders WHERE user_id = #{userId}
+    </select>
+
+    <insert id="insertUserOrder" parameterType="com.solvd.carina.demo.gui.models.UserOrder">
+        INSERT INTO User_Orders (user_id, product_name, price) VALUES (#{userId}, #{productName}, #{price})
+    </insert>
+
+</mapper>
